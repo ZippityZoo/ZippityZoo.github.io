@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*background-image: url('./assets/boats/bgcityfull.PNG');
+  background-repeat: no-repeat;*/
+  display: grid;
+}
+
+/*rgba(97, 0, 41, 1);
+background-image: linear-gradient(to bottom,rgba(0, 0, 134, 1), rgba(97, 0, 41, 1) 10%, rgba(0, 0, 134, 1));*/
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+img{
+  margin-left: -50px;
+  margin-bottom: -90px;
+  margin-right: -70px;
+}
+iframe{
+  padding: 30px 50px 40px 50px;
+  border-image-source: url("./assets/billboard/leftbb.PNG");
+  border-image-width: 50px;
+  border-image-slice: 100;
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-clip:content-box;
+  z-index: 0;
+}
+.split{
+  height: 100%;
+  width:50%;
+  position: fixed;
+}
+.crop{
+  overflow: hidden;
+}
+/* I want the skill name to sit in the boat 
+  and the years to be on the side
+*/
+.skill{
+  list-style-type: none;
+  font-size: 25px;
+  font-family: "kiwi soda";
+  text-align: center;
+  padding: 50px;
+  position:relative;
+}
+.item4.hidden{
+  visibility: hidden;
+}
+
+h1{
+  color:purple;
+  font-family: "kiwi soda";
+  font-size: 50px;
+  text-align: center;
+  -webkit-text-stroke: .5px black;
+}
+.bgcity{
+  background-image: url('./assets/boats/bgcityfull.PNG');
+  background-attachment: fixed;
+  background-size:cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.bgcity.scroll{
+  background-position: bottom;
+  background-size:cover;
+  background-attachment: scroll;
+}
+.experinces{
+  padding: 20px 20px 20px 30px;
+  margin-left: 40px;
+  border-image-width: 30px;
+  border-image-source: url("./assets/billboard/bottomerightbb.PNG");
+  border-image-slice: 100;
+  background-color: aliceblue;
+  background-clip:content-box;
+}
+
+.item3{
+  grid-row: 2 / span 3;
+}
+.projectsleft{
+  padding: 10px;
+  border-image-source: url("./assets/billboard/leftbb.PNG");
+  border-image-width: 20px;
+  border-image-slice: 100;
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-clip:content-box;
+  z-index: 0;
+}
+.projectsbottom{
+  padding: 30px;
+  border-image-source: url("./assets/billboard/bottomleftbb.PNG");
+  border-image-width: 50px;
+  border-image-slice: 100;
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-clip:content-box;
+  z-index: 0;
+}
+.projectstext{
+  padding: 30px;
+  margin: 20px 25px 20px 50px;
+  z-index: -1;
+}
+
+.body{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 65px
+
+}
+.header{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 0%;
+  background-color: rgba(1, 1, 1, 0.5);
+
+  border-color: aliceblue;
+  border-width: 6px;
+}
+.header > .item1{
+  grid-column: 2 / span 4;
+  border-color: gold;
+}
+.aboutme{
+  padding: 10px 20px 10px 20px;
+  border-image-source: url("./assets/billboard/leftbb.PNG");
+  border-image-width: 20px;
+  border-image-slice: 100;
+  background-color: aliceblue;
+  background-clip:content-box;
+  background-repeat: no-repeat;
+}
+.aboutmetext{
+  padding: 15px 10px 10px 110px
+}
+.plaque{
+  background-image: url("./assets/billboard/Plaque.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: inherit;
+  background-size: 650px 785px;
+  text-align: center;
+  padding: 85px 100px 40px 100px;
+}
+.tony{
+  width: 75%;  
+  height: 75%; 
+  padding-left: 100px;
+  padding-top: 25px;
+}
+@font-face {
+  font-family: "kiwi soda";
+  src: url('./assets/KiwiSoda.ttf');
+}
