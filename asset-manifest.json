@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.99705549.css",
+    "main.js": "/static/js/main.877f0086.js",
+    "static/js/453.7847ac3d.chunk.js": "/static/js/453.7847ac3d.chunk.js",
+    "static/media/bgcityfull.PNG": "/static/media/bgcityfull.6bd51600dc269420764b.PNG",
+    "static/media/KiwiSoda.ttf": "/static/media/KiwiSoda.deb2b86e2833d31468d5.ttf",
+    "static/media/Plaque.svg": "/static/media/Plaque.507e40d187aaf9c8c728.svg",
+    "static/media/bottomleftbb.PNG": "/static/media/bottomleftbb.73b60a2ccd52e198f338.PNG",
+    "static/media/leftbb.PNG": "/static/media/leftbb.f430f601263a0803a672.PNG",
+    "static/media/bottomerightbb.PNG": "/static/media/bottomerightbb.0aaae0c07bb3e635f45d.PNG",
+    "static/media/boatGold.PNG": "/static/media/boatGold.7666699d08ba89160baf.PNG",
+    "static/media/boatSilver.PNG": "/static/media/boatSilver.6b49b4c98d5056285a8c.PNG",
+    "static/media/boatDiamond.PNG": "/static/media/boatDiamond.a3ff3e8c013519b35076.PNG",
+    "static/media/boatMaster.PNG": "/static/media/boatMaster.d5526a7c10ec592266ad.PNG",
+    "static/media/boatBronze.PNG": "/static/media/boatBronze.b2906e7d7da076a5887a.PNG",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.99705549.css.map": "/static/css/main.99705549.css.map",
+    "main.877f0086.js.map": "/static/js/main.877f0086.js.map",
+    "453.7847ac3d.chunk.js.map": "/static/js/453.7847ac3d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99705549.css",
+    "static/js/main.877f0086.js"
+  ]
+}
