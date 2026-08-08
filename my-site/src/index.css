@@ -26,7 +26,7 @@ iframe{
   border-image-source: url("./assets/billboard/leftbb.PNG");
   border-image-width: 50px;
   border-image-slice: 100;
-  background-color: aliceblue;
+  background-color: yellow;
   background-repeat: no-repeat;
   background-clip:content-box;
   z-index: 0;
@@ -50,16 +50,30 @@ iframe{
   padding: 50px;
   position:relative;
 }
+.skillflipped{
+  list-style-type: none;
+  font-size: 25px;
+  font-family: "kiwi soda";
+  text-align: center;
+  padding: 50px;
+  position:relative;
+
+}
 .item4.hidden{
   visibility: hidden;
 }
 
 h1{
-  color:purple;
+  color:rgba(256,120,256,1);
   font-family: "kiwi soda";
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
-  -webkit-text-stroke: .5px black;
+  -webkit-text-stroke: 0.5px rgb(220, 66, 255);
+  background-image: radial-gradient(rgba(220, 66, 255,0.5),rgba(220, 66, 255,0.01),rgba(220, 66, 255,0));
+  background-size: contain;
+  border-radius: 50%;
+  margin: 0px;
+  padding: 20px 0px 20px 0px;
 }
 .bgcity{
   background-image: url('./assets/boats/bgcityfull.PNG');
@@ -75,13 +89,16 @@ h1{
   background-attachment: scroll;
 }
 .experinces{
-  padding: 20px 20px 20px 30px;
-  margin-left: 40px;
+  padding: 20px 30px 20px 30px;
+  margin: 0px;
   border-image-width: 30px;
   border-image-source: url("./assets/billboard/bottomerightbb.PNG");
   border-image-slice: 100;
-  background-color: aliceblue;
   background-clip:content-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: left;
+  text-indent: 10px;
 }
 
 .item3{

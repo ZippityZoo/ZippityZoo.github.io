@@ -5,6 +5,8 @@ import number3 from './assets/boats/boatGold.PNG';
 import number4 from './assets/boats/boatDiamond.PNG';
 import number5 from './assets/boats/boatMaster.PNG';
 import number6 from './assets/boats/boatMaster.PNG';
+import od from './assets/billboard/billboardBackGroundImgs/IMG_6447.PNG';
+import y from './assets/billboard/billboardBackGroundImgs/Y.png'
 import face from './assets/Tony.png'
 import './App.css';
 import {motion} from 'motion/react';
@@ -26,7 +28,6 @@ const skillclass = document.getElementsByClassName("item4");
         bg[0].classList.remove("scroll");
         skillclass[0].classList.add("hidden");
       }
-      console.log(window.scrollY);
   });
 
 
@@ -60,13 +61,13 @@ function HeaderProfile(){
     <div className="header" >
       <div item="item1">
       <motion.img 
-      initial={{rotate : 0}}
-      animate = {{rotate:[0,30,-30,0]}} 
+      initial={{rotate : 30}}
+      animate = {{rotate:[30,-30,30]}} 
       transition={{
         duration: 7,
-        times: [0,0.333,.667,1],
+        times: [0,0.5,1],
         repeat:Infinity,
-        ease: ["easeInOut","easeInOut","easeInOut","easeInOut"],
+        ease: ["easeInOut","easeInOut","easeInOut"],
       }}
       className="tony" src={face} />
       </div>
@@ -108,7 +109,7 @@ function Experince(){
   return(
     <div >
       <h1>Experince</h1>
-      <div className="experinces">
+      <div className="experinces" style={{backgroundColor:"red",backgroundImage:`url(${od})`, backgroundPositionX:"120px",backgroundPositionY:"-30px"}}>
       <h4>Office Depot</h4>
       <h5>Sales/Print Part Time Associate</h5>
       <p>Nov 2024 - Present</p>
@@ -118,7 +119,7 @@ function Experince(){
         <li>Minor Graphical Designing Tasks</li>
       </ul>
       </div>
-      <div className="experinces">
+      <div className="experinces" style={{backgroundColor:"aliceblue",backgroundImage:`url(${y})`, backgroundPositionX:"250px",backgroundPositionY:"30px",backgroundSize:"128px 128px"}}>
       <h4>YMCA of Greensboro NC </h4>
       <h5>Youth Development Leader</h5>
       <p>2022-2024</p>
@@ -196,14 +197,7 @@ const no3 = number3;
 const no4 = number4;
 const no5 = number5;
 const no6 = number6;
-/*
-const no1 = <img className="crop" src={number1} alt = "1 Year"  style ={{width:{size}, height:{size}}}/>;
-const no2 = <img src={number2} alt = " 2 Years" style ={{width:{size}, height:{size}}}/>;
-const no3 = <img src={number3} alt = " 3 Years"  style ={{width:{size}, height:{size}}}/>;
-const no4 = <img src={number4} alt = " 4 Years"  style ={{width:{size}, height:{size}}}/>;
-const no5 = <img src={number5} alt = " 5 Years"  style ={{width:{size}, height:{size}}}/>;
-const no6 = <img src={number6} alt = " 6 Years"  style ={{width:{size}, height:{size}}}/>;
-*/
+
 const langSkills =  [["C ",no2,2],["C++ ",no4,4],["Java ",no6,6],["Python ",no3,3],["NodeJS ",no1,1]];
 const frontendSkills = [["HTML ",no4,4],["CSS ",no4],4,["JavaScript ",no4,4],["ReactJS ",no1,1],["Swift/SwiftUI ",no2,2]];
 const dbSkills =   [["DBeaver ",no1,1],["SQL ",no4,4],["SQLite ",no4,4],["PostgreSQL ",no2,2]];
@@ -211,12 +205,15 @@ const fullstackSkills =  [["Maven ",no2,2],["SpringBoot ",no2,2],["Laravel ",no2
 const gamingSkills =  [["GDScript",no3,3]];
 const skills = [langSkills,frontendSkills,dbSkills,fullstackSkills,gamingSkills];
 function Skills(){
+  var skillindex = 0;
   var temp;
+  const [currentSkills, setSkillBoard] = useState(skills[skillindex]);
   return(
     <div style={{paddingTop:"400px"}}>
+      <button onClick={transitionBoard}>Press Me</button>
       <h1>Skills</h1>
       <ul>
-        {skills[0].map((skill,index) => (
+        {currentSkills.map((skill,index) => (
           <div>
           <motion.li
           initial={{rotate : -15}}
@@ -227,7 +224,7 @@ function Skills(){
             repeat:Infinity,
             ease: ["easeInOut","easeInOut","easeInOut"],
           }}
-           key = {index} className="skill" style={{ backgroundImage:`url(${skill[1]})`,
+           key = {(index)} className="skill" style={{ backgroundImage:`url(${skill[1]})`,
             backgroundRepeat:"no-repeat",backgroundOrigin:"content-box",backgroundPositionY:"0px", 
             backgroundSize:"contain" ,
             width:'144px',height:'45px',left:`${temp = (Math.random() * 75)}%`,top:"50px",
@@ -245,7 +242,7 @@ function Skills(){
                 repeat:Infinity,
                 ease: ["easeInOut","easeInOut","easeInOut"],
               }}
-               key = {index} className="skill" style={{ 
+               key = {index + skills.length} className="skillflipped" style={{ 
                 backgroundImage:`url(${skill[1]})`,
                 opacity:0.3,
                 backgroundBlendMode:"normal",
@@ -254,7 +251,10 @@ function Skills(){
                 width:'144px',height:'45px',left:`${temp}%`,top:"50px",
                 paddingBottom:'0px', marginBottom:'0px',bottom:'0px'
                 
-                }}></motion.li>
+                }}><div style={{position:'relative',top:10}}>
+                  {filepathToYear(skill[2])}
+                  </div>
+                  </motion.li>
           </div>
         ))}
       </ul>
@@ -279,6 +279,18 @@ function Skills(){
         default:
           return x;
       }
+  }
+  function transitionBoard(){
+    //console.log("is i greater than the length of skills",i > skills.length);
+    if(skillindex > skills.length){
+      skillindex = 0;
+      console.log("set i to 0");
+    }else{
+      skillindex += 1;
+      console.log("increment skillindex to", skillindex);
+
+    }
+    setSkillBoard(currentSkills => skills[skillindex]);
   }
 }
 
