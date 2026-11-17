@@ -8,6 +8,7 @@ body {
   /*background-image: url('./assets/boats/bgcityfull.PNG');
   background-repeat: no-repeat;*/
   display: grid;
+  
 }
 
 /*rgba(97, 0, 41, 1);
@@ -16,7 +17,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-img{
+.pimg{
   margin-left: -50px;
   margin-bottom: -90px;
   margin-right: -70px;
@@ -41,6 +42,7 @@ iframe{
 }
 /* I want the skill name to sit in the boat 
   and the years to be on the side
+  className="item4"
 */
 .skill{
   list-style-type: none;
@@ -59,23 +61,13 @@ iframe{
   position:relative;
 
 }
-.item4.hidden{
-  visibility: hidden;
+.skill-container{
+  padding-top: 400px;
+  height: 700px;
+  width: 100%;
+  overflow:hidden;
 }
-
-h1{
-  color:rgba(256,120,256,1);
-  font-family: "kiwi soda";
-  font-size: 60px;
-  text-align: center;
-  -webkit-text-stroke: 0.5px rgb(220, 66, 255);
-  background-image: radial-gradient(rgba(220, 66, 255,0.5),rgba(220, 66, 255,0.01),rgba(220, 66, 255,0));
-  background-size: contain;
-  border-radius: 50%;
-  margin: 0px;
-  padding: 20px 0px 20px 0px;
-}
-.bgcity{
+.skill-background{
   background-image: url('./assets/boats/bgcityfull.PNG');
   background-attachment: fixed;
   background-size:cover;
@@ -83,11 +75,50 @@ h1{
   background-repeat: no-repeat;
   z-index: 1;
 }
-.bgcity.scroll{
-  background-position: bottom;
-  background-size:cover;
-  background-attachment: scroll;
+.item4{
+  grid-column: 1 / span 2;
+  place-items: center
+
 }
+
+h1{
+  color:rgba(256,256,256,1);
+  font-family: "kiwi soda";
+  font-size: 60px;
+  text-align: center;
+  -webkit-text-stroke: 0.5px rgba(220, 66, 255,0.5);
+  background-image: radial-gradient(rgba(220, 66, 255,0.5),rgba(220, 66, 255,0.01),rgba(220, 66, 255,0));
+  background-size: contain;
+  border-radius: 50%;
+  margin: 0px;
+  padding: 20px 0px 20px 0px;
+}
+h2{
+  color:rgba(256,256,256,1);
+  font-family: "kiwi soda";
+  text-align: center;
+  -webkit-text-stroke: 0.5px rgba(220, 66, 255,0.5);
+  background-image: radial-gradient(rgba(220, 66, 255,0.5),rgba(220, 66, 255,0.01),rgba(220, 66, 255,0));
+  background-size: contain;
+  border-radius: 50%;
+  padding-right: 25px;
+}
+.bgcity{
+  background-image: url('./assets/boats/bgcityfull.PNG');
+  background-attachment:fixed;
+  background-size:cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.bgcity.scroll{
+  background-size: 100% auto;
+  background-attachment: scroll;
+  background-position:0px 1800px;
+  background-color: rgba(96, 1, 41, 1);
+
+}
+
 .experinces{
   padding: 20px 30px 20px 30px;
   margin: 0px;
@@ -141,7 +172,7 @@ h1{
   grid-template-columns: auto auto auto auto;
   grid-gap: 0%;
   background-color: rgba(1, 1, 1, 0.5);
-
+  grid-template-rows: auto;
   border-color: aliceblue;
   border-width: 6px;
 }
@@ -162,13 +193,14 @@ h1{
   padding: 15px 10px 10px 110px
 }
 .plaque{
-  background-image: url("./assets/billboard/Plaque.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-clip: inherit;
   background-size: 650px 785px;
   text-align: center;
+  font-family: "kiwi soda";
   padding: 85px 100px 40px 100px;
+  display: grid;
 }
 .tony{
   width: 75%;  
@@ -176,6 +208,19 @@ h1{
   padding-left: 100px;
   padding-top: 25px;
 }
+.icons{
+  height:64px;
+  width:64px;
+  object-position: 0% 0%;
+}
+.faceparts{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 45%;
+}
+
 @font-face {
   font-family: "kiwi soda";
   src: url('./assets/KiwiSoda.ttf');
